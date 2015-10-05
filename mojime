@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+# Exit cleanly from an early interrupt
+Signal.trap("INT") { abort }
+
+require "json"
+emojis = JSON.parse IO.read("emojis.json")
+
+keywords = emojis.keys.reduce([]) { |acc, key| acc << ":#{key}:" }
+chars = emojis.values.reduce([]) { |acc, value| acc << value["char"] }
+
+number = ARGV.index "--number"
+no_spaces = ARGV.index "--no-spaces"
+output_char = ARGV.include? "--char"
+
+samples = number ? Integer(ARGV[number + 1]) : 1
+
+source = output_char ? chars : keywords
+delimiter = no_spaces ? "" : " "
+
+puts source.shuffle.sample(samples).join(delimiter)
