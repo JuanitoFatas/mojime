@@ -2,9 +2,10 @@
 
 Outputs random emojis.
 
-The primary purpose of this project is to provide all the emojies that can be used by any ascii language
-To view the list of all the empjies please open the emojies.json file 
-it lists all the emojies in jason format and ypu can use this jason as per your need
+The primary purpose of this project is to provide all the emojis that can be used by any ascii
+language. To view the list of all the emojis, please open the [emojis.json file](/emojis.json).
+It lists all the emojis in json format and you can use this json as per your need.
+
 ## Usage
 
 ```
