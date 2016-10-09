@@ -13,6 +13,10 @@ number = ARGV.index "--number"
 no_spaces = ARGV.index "--no-spaces"
 output_char = ARGV.include? "--char"
 
+number ||= ARGV.index "-n"
+no_spaces ||= ARGV.index "-s"
+output_char ||= ARGV.include? "-c"
+
 samples = number ? Integer(ARGV[number + 1]) : 1
 
 source = output_char ? chars : keywords
