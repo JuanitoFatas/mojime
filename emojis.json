@@ -159,6 +159,16 @@
     "char": "😝",
     "category": "people"
   },
+  "money_tongue": {
+    "keywords": ["face", "money", "rich", "smile"],
+    "char": "🤑",
+    "category": "people"
+  },
+  "nauseated": {
+     "keywords": ["face", "nausea", "disgust"],
+     "char": "🤢",
+     "category": "people"
+  },
   "disappointed": {
     "keywords": ["face", "sad", "upset", "depressed"],
     "char": "😞",
